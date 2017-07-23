@@ -1,7 +1,6 @@
 /*
  * NumberUtility.java
  *
- *  Source:  http://www.freejavaguide.com  
  */
 
 import java.math.BigDecimal;
@@ -9,18 +8,10 @@ import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.util.Locale;
 
-/**
- * Class provides common functions on number formats.
- */
 
 public class NumberUtility {
 	
-    /**
-     * Method takes Object as parameter and returns decimal number.
-     * if argument is float or double and contains tailing zeros
-     * it removes them. If argument is float or double then no change in return type.
-     * Change the Format of the Number by changing the String Pattern
-     */
+    
     public static String changeToDecimalFormat(Object number) {
 
         BigDecimal bdNumber = new BigDecimal(number.toString());
@@ -31,7 +22,7 @@ public class NumberUtility {
 
     }
 
-    /* Method takes Object as parameter and removes commas from the parameter */
+   
     public static double removeCommasFromNumber(Object number) {
         try {
             StringBuffer inputNo = new StringBuffer(number.toString());
@@ -49,10 +40,7 @@ public class NumberUtility {
         }
     }
 
-    /* Some times its required to have a fixed set of decimal places for a 
-     * number. We can set that by changing the precision number for a particular
-     * input BigDecimal Input String
-     */
+    
     public static String changeToRequiredDecimals(String bigDecimalString,
             int precision) {
         String newFormattedString = null;
